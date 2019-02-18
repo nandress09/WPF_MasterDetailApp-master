@@ -18,8 +18,5 @@ namespace WPF_MasterDetailApp
         {
             ProductBL productViewerBl = new ProductBL();
         }
-
-
-
     }
 }

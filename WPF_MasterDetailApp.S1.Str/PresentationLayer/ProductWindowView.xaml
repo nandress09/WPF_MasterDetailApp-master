@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WPF_MasterDetailApp.PresentationLayer"
         mc:Ignorable="d"
         Title="Talent Agency Software, Inc." 
-        Height="500" 
-        Width="900"
+        Height="600" 
+        Width="800"
         ResizeMode="NoResize"
         WindowStyle="SingleBorderWindow"
         WindowStartupLocation="CenterScreen">
@@ -15,6 +15,113 @@
 
     </Window.Resources>
     <Grid>
+
+        <Button x:Name="Quit" 
+                Content="Exit" 
+                HorizontalAlignment="Left" 
+                Margin="690,15,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" 
+                Click="Button_Quit_Click"/>
+        <TextBox Text="{Binding SelectedProduct.Description}" 
+                 HorizontalAlignment="Left" 
+                 Height="63" 
+                 Margin="30,125,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="295"/>
+        <TextBox Text="{Binding SelectedProduct.OwnerName}" 
+                 HorizontalAlignment="Left" 
+                 Height="30" 
+                 Margin="460,205,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+        <TextBox Text="{Binding SelectedProduct.Beds}" 
+                 HorizontalAlignment="Left" 
+                 Height="30" 
+                 Margin="460,250,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+        <TextBox Text="{Binding SelectedProduct.Baths}" 
+                 HorizontalAlignment="Left" 
+                 Height="30" 
+                 Margin="460,290,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+        <TextBox Text="{Binding SelectedProduct.ListingDateTime}" 
+                 HorizontalAlignment="Left" 
+                 Height="35" 
+                 Margin="460,330,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+        <TextBox Text="{Binding SelectedProduct.Style}" 
+                 HorizontalAlignment="Left" 
+                 Height="30" 
+                 Margin="460,375,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+        <TextBox Text="{Binding SelectedProduct.Price}" 
+                 HorizontalAlignment="Left" 
+                 Height="45" 
+                 Margin="460,420,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="70"/>
+
+
+        <TextBox Text="{Binding CompanyInfo.Name}" 
+                 HorizontalAlignment="Left" 
+                 Height="63" 
+                 Margin="215,15,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="335"/>
+        <Image 
+                    Grid.Column="0"
+                    Source="{Binding SelectedProduct.ImageFilePath}" Margin="30,200,474,111"/>
+
+        <Label Content="Current Owner" 
+               HorizontalAlignment="Left" 
+               Margin="355,205,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="90"/>
+        <Label Content="Listing Price" 
+               HorizontalAlignment="Left" 
+               Margin="350,420,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="75"/>
+        <Label Content="House Style" 
+               HorizontalAlignment="Left" 
+               Margin="355,370,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="75"/>
+        <Label Content="List Date" 
+               HorizontalAlignment="Left" 
+               Margin="355,330,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="75"/>
+        <Label Content="Baths" 
+               HorizontalAlignment="Left" 
+               Margin="355,290,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="75"/>
+        <Label Content="Beds" 
+               HorizontalAlignment="Left" 
+               Margin="355,250,0,0" 
+               VerticalAlignment="Top" 
+               Height="35" 
+               Width="75"/>
+        <Label Content="House Description" HorizontalAlignment="Left" Margin="30,100,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

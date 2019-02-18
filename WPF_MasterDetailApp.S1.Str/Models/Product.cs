@@ -10,22 +10,23 @@ namespace WPF_MasterDetailApp.Models
     {
         #region ENUMS
 
-        public enum GenderType { none, male, female }
+        public enum HouseStyle { undefined, Modern, Traditional }
 
         #endregion
 
         #region FIELDS
 
         private int _id;
-        private string _firstName;
-        private string _lastName;
-        private int _age;
-        private GenderType _gender;
-        private string _imageFileName;
+        private string _ownerName;
         private string _description;
-        private DateTime _hireDate;
-        private double _averageAnnualGross;
+        private double _price;
+        private int _baths;
+        private int _beds;
+        private DateTime _listingDateTime;
+        private HouseStyle _style;
+        private string _imageFileName;
 
+        
         #endregion
 
         #region PROPERTIES
@@ -36,42 +37,10 @@ namespace WPF_MasterDetailApp.Models
             set { _id = value; }
         }
 
-        public string FirstName
+        public string OwnerName
         {
-            get { return _firstName; }
-            set
-            {
-                _firstName = value;
-                //sprint two stuff  RaisePropertyChangedEvent("FullName"); // update items bound to the FullName property
-            }
-        }
-
-        public string LastName
-        {
-            get { return _lastName; }
-            set
-            {
-                _lastName = value;
-                //sprint two stuff  RaisePropertyChangedEvent("FullName"); // update items bound to the FullName property
-            }
-        }
-
-        public int Age
-        {
-            get { return _age; }
-            set { _age = value; }
-        }
-
-        public GenderType Gender
-        {
-            get { return _gender; }
-            set { _gender = value; }
-        }
-
-        public string ImageFileName
-        {
-            get { return _imageFileName; }
-            set { _imageFileName = value; }
+            get { return _ownerName; }
+            set { _ownerName = value; }
         }
 
         public string Description
@@ -80,21 +49,40 @@ namespace WPF_MasterDetailApp.Models
             set { _description = value; }
         }
 
-        public DateTime HireDate
+        public double Price
         {
-            get { return _hireDate; }
-            set { _hireDate = value; }
+            get { return _price; }
+            set { _price = value; }
         }
 
-        public double AverageAnnualGross
+        public int Baths
         {
-            get { return _averageAnnualGross; }
-            set { _averageAnnualGross = value; }
+            get { return _baths; }
+            set { _baths = value; }
         }
 
-        public string FullName
+        public int Beds
         {
-            get { return _firstName + " " + _lastName; }
+            get { return _beds; }
+            set { _beds = value; }
+        }
+
+        public DateTime ListingDateTime
+        {
+            get { return _listingDateTime; }
+            set { _listingDateTime = value; }
+        }
+
+        public HouseStyle Style
+        {
+            get { return _style; }
+            set { _style = value; }
+        }
+
+        public string ImageFileName
+        {
+            get { return _imageFileName; }
+            set { _imageFileName = value; }
         }
 
         public string ImageFilePath

@@ -34,43 +34,37 @@ namespace WPF_MasterDetailApp.BusinessLayer
 
         #region CONSTRUCTORS
         public ProductBL()
-        {   _productWindowPresenter = new ProductWindowPresenter(GetCompanyData(), GetProductData());
+        {
+            _productWindowPresenter = new ProductWindowPresenter(GetCompanyData(), GetProductData());
 
-            _productWindowView = new ProductWindowView(_ProductWindowPresenter);
-            _productWindowView.DataContext = productWindowPresenter;
+            _productWindowView = new ProductWindowView(_productWindowPresenter);
+            _productWindowView.DataContext = _productWindowPresenter;
             _productWindowView.Show();
         }
 
         private Product GetProductData()
         {
-           
-
-            //short way to send stuff
             return new Product
             {
-                Id = 1
-                FirstName = "Fred",
-                LastName = "Flinstone",
-                Age = 33,
-                Gender = Product.GenderType.male,
-                AverageAnnualGross = 333,
-                HireDate = DateTime.Parse("1/22/1958"),
-                Description = "The Big Guy",
-                ImagefileName = "fred_flinston.jpg"
-
+                Id = 1,
+                OwnerName = "Philip",
+                Description = "Freshly built in 2017. One acre of land total. No neibors for miles. Big Basement.",
+                Price = 600000.00,
+                Style = Product.HouseStyle.Modern,
+                Beds = 2,
+                Baths = 2,
+                ListingDateTime = new DateTime(2019, 01, 26),
+                ImageFileName = "house.jpg"
             };
-
-
         }
         private Company GetCompanyData ()
         {
-            //long way to send stuff
-            Company company = new Company();
-            company.Name = "Sara Lee Cats";
-            company.Address = "west third street";
-            company.City = "Traverse City";
-
-            return company;
+            return new Company
+            {
+                Name = "Sara Lee Realestate",
+                Address = "9887 Carriage St.",
+                City = "Traverse City"
+            };
         }
 
         #endregion
